@@ -42,19 +42,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Early years",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "5 - 6yrs",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "7 - 8yrs",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Football camps",
     icon: creator,
   },
 ];
@@ -116,16 +116,20 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Qualifications",
+    company_name: "coaching",
     icon: starbucks,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "FA Level 3 (Uefa B Licence)",
+      "FA Youth Module 1 and 2 in developing players 5-11 years of age",
+      "FA Youth Award in coaching 12-16 years of age",
+      "FA Emergency First Aid Workshop",
+      "FA Safeguarding Children Workshop",
+      "FA Licenced Coaches Club Member",
+      "FA Public Liability Insured",
+      "DBS Checked",
     ],
   },
   {
