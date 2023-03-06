@@ -24,11 +24,11 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="h-screen md:pl-4 lg:pl-[550px] lg:pb-[150px]">
-        {/* <ComputersCanvas /> */}
-      </div>
-      <div className="absolute top-0 pt-48 flex flex-col items-center justify-center w-full h-full">
-          <img src="coach.jpg" layout={'fill'} className="rounded-lg w-[400px] md:w-[600px] h-[400px]" />
+      {/* <div className="h-screen md:pl-4 lg:pl-[550px] lg:pb-[250px]">
+         <ComputersCanvas /> 
+      </div> */}
+      <div className="absolute top-0 pt-48 flex flex-col items-center justify-center w-full h-full p-4 ">
+          <img src="coach.jpg" layout={'fill'} className="rounded-lg sm:w-[400px] md:w-[600px] mb-24 md:mb-0 xs:w-[350px]  aspect-video" />
       </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
