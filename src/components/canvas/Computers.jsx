@@ -6,23 +6,26 @@ import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   const football = useGLTF("./football/scene.gltf");
-  const myMesh = React.useRef();
+  // const myMesh = React.useRef();
 
-  useFrame(({ clock }) => {
-    const a = clock.getElapsedTime();
-    myMesh.current.rotation.y = a;
-  });
+  // useFrame(({ clock }) => {
+  //   const a = clock.getElapsedTime();
+  //   myMesh.current.rotation.y = a;
+  // });
 
   return (
-    <mesh ref={myMesh}>
-      <hemisphereLight intensity={0.25} groundColor='green' />
-     
-      <pointLight intensity={1} />
+    <mesh>
       <primitive
         object={football.scene}
         scale={isMobile ? 15 : 20.75}
         position={isMobile ? [0, -1, 0] : [0, -2, 0]}
         rotation={[0.01, -0.2, -0.1]}
+      />
+      <OrbitControls
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+        autoRotate={true}
       />
     </mesh>
   );
@@ -54,12 +57,14 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='always'
+      frameloop='demand'
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 10], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
+      <hemisphereLight intensity={0.25} groundColor='green' />
+      <pointLight intensity={1} />
       <spotLight
         position={[10, 50, 50]}
         angle={0.12}
@@ -69,11 +74,7 @@ const ComputersCanvas = () => {
         shadow-mapSize={1024}
       />
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
+        
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
